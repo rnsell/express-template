@@ -1,0 +1,23 @@
+{
+  "name": "express-template",
+  "version": "1.0.0",
+  "description": "Express template to set up server.",
+  "main": "server.js",
+  "scripts": {
+    "config:rm": "rm -f ./config/files/*.json",
+    "config:dev:db": "cp ./config/dev/dev.database.json ./config/files/database.json",
+    "config:dev:express": "cp ./config/dev/dev.database.json ./config/files/express.json",
+    "config:dev": "npm run config:rm && npm run config:dev:db && npm run config:dev:express",
+    "lint": "eslint ./config ./routes ./setup ./test",
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "author": "Robert Sell",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
