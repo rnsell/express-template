@@ -1,0 +1,5 @@
+{
+    "name": "THI API DEV",
+    "port": 3000,
+    "logLevel": "trace"
+}
