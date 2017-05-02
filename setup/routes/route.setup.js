@@ -1,11 +1,11 @@
 "use strict";
 
 const healthRoute = require("../../routes/health");
+const docsRoute = require("../../routes/docs/routes");
 
 const setup = ({app})=> {
-    const msg = "heathy";
-    app.use("/health", healthRoute({msg}));
-
+    app.use("/health", healthRoute({msg: 'healthy'}));
+    app.use("/docs", docsRoute);
 };
 
 module.exports = setup;
