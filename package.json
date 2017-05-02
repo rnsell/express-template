@@ -15,9 +15,27 @@
   "author": "Robert Sell",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "bunyan": "^1.8.10",
+    "compression": "^1.6.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "express-async-wrap": "^1.0.0",
+    "hide-powered-by": "^1.0.0",
+    "passport": "^0.3.2",
+    "pg": "^6.1.5",
+    "sequelize": "^3.30.4",
+    "swagger-jsdoc": "^1.9.3",
+    "swagger-tools": "^0.10.1"
   },
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "ava": "^0.19.1",
+    "eslint": "^3.19.0",
+    "expect": "^1.20.2",
+    "husky": "^0.13.3",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.3.0",
+    "supertest": "^3.0.0"
   }
 }
