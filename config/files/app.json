@@ -1,0 +1,5 @@
+{
+    "appName": "THI API",
+    "appPort": "3000",
+    "appLogLevel": "info"
+}
