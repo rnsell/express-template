@@ -24,3 +24,5 @@ app.listen(config.express.port, () => {
   app.emit('serverStarted')
   console.log(`Express listening on port: ${config.express.port}`)
 })
+
+module.exports = app

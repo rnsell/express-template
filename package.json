@@ -9,7 +9,8 @@
     "config:dev:express": "cp ./config/dev/dev.database.json ./config/files/express.json",
     "config:dev": "npm run config:rm && npm run config:dev:db && npm run config:dev:express",
     "lint": "eslint ./config ./routes ./setup ./test",
-    "test": "npm test",
+    "test": "ava ./test/index.test.js",
+    "coverage": "nyc --check-coverage --lines 100 --functions 100 --branches 1000 --statements 100 --reporter=lcov --reporter=text npm run test",
     "start": "node server.js"
   },
   "author": "Robert Sell",
