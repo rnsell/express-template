@@ -1,12 +1,12 @@
 "use strict";
 const databaseConf = require("./files/database.json");
-const expressConf = require("./files/express.json");
+const appConf = require("./files/app.json");
 
 // DOCUMENT THIS IN README
-const {PG_DATABASE, PG_HOST, PG_PORT,  PG_USER, PG_PASSWORD} = process.env;
-const {EXPRESS_PORT} = process.env;
+const { PG_DATABASE, PG_HOST, PG_PORT,  PG_USER, PG_PASSWORD } = process.env;
+const { APP_NAME, APP_PORT, APP_LOG_LEVEL } = process.env;
 const { database: databaseName, host, port, user, password } = databaseConf;
-const { expressport } = expressConf;
+const { appPort, appName, appLogLevel } = appConf;
 
 
 const database = {
@@ -16,12 +16,14 @@ const database = {
     host:  PG_HOST || host || "localhost",
     port:  PG_PORT || port ||  5432
 };
-const express = {
-    port: EXPRESS_PORT || expressport || 3000
-};
 
+const app = {
+    name: APP_NAME || appName || 'THI API',
+    port: APP_PORT || appPort || 3000,
+    logLeve: APP_LOG_LEVEL || appLogLevel || 'info',
+};
 
 module.exports = {
     database,
-    express
+    app,
 };
